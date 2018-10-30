@@ -32,7 +32,7 @@ def brackets_judge(str1):
         print()
     # 最後まで探索してstackがからの時
     if isOK:
-        print("\nOK")
+        print("OK")
     else:
         print("error")
 
@@ -45,5 +45,5 @@ def brackets_dict(str1):
     elif str1 == left[2]:
         return right[2]
 
-brackets_judge(data3)
+brackets_judge(data1)
 
