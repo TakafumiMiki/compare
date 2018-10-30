@@ -1,5 +1,5 @@
 st1 = "(([x))"
-st2 = "(abc(123)abc))"
+st2 = "(abc[{12}3a]bc)"
 str3 = "{ x ( y ) (( z] x) [x] {y] }"
 
 left = ["(", "[", "{"]
@@ -39,11 +39,11 @@ def brackets_judge(str1):
 
 def brackets_dict(str1):
     if str1 == left[0]:
-        return ")"
+        return right[0]
     elif str1 == left[1]:
-        return "]"
+        return right[1]
     elif str1 == left[2]:
-        return "}"
+        return right[2]
 
-brackets_judge(str3)
+brackets_judge(st2)
 
