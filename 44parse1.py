@@ -18,8 +18,7 @@ float main(){
 # トークン分割のルール(以下に追加する)
 integer = Word( nums ).setResultsName( 'integer' )
 comment = cppStyleComment.setResultsName( 'comment' )
-#left = "([{"
-#right = ")]}"
+nestedExpr('{', '}').parseString(txt).asList()
 
 # 条件を追加したらここにも追加する 追加する順に注意
 r = (comment|integer)

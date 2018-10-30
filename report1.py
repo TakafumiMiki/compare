@@ -1,6 +1,6 @@
-st1 = "(([x))"
-st2 = "(abc[{12}3a]bc)"
-str3 = "{ x ( y ) (( z] x) [x] {y] }"
+data1 = "( ( ( x ) ) )"
+data2 = "2[3 5(7{11}13)17]19"
+data3 = "{ {x(y)((z) x) {x} {y} }"
 
 left = ["(", "[", "{"]
 right = [")", "]", "}"]
@@ -45,5 +45,5 @@ def brackets_dict(str1):
     elif str1 == left[2]:
         return right[2]
 
-brackets_judge(st2)
+brackets_judge(data3)
 
