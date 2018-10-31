@@ -1,4 +1,7 @@
-data1 = "( ( ( x ) ) )"
+# 1.brackets_dictで括弧の対応付け
+# 2.stackがなくなりOK判定が出た後に括弧の追加が来た時の対応
+# 3.
+data1 = "( ( ( x ) ) )( ()"
 data2 = "2[3 5(7{11}13)17]19"
 data3 = "{ {x(y)((z) x) {x} {y} }"
 
@@ -9,6 +12,9 @@ def brackets_judge(str1):
     # 判定する括弧
     stk = []
     isOK = False
+    print("input: " + str1)
+    print("  文字\t操作\tスタック")
+    print("-"*30)
     for i,inputstr in enumerate(str1):
         print(str(i + 1) + ": " + inputstr, end = "\t")
         # (か[か{ならpush
@@ -31,7 +37,7 @@ def brackets_judge(str1):
             print("pass" + "\t" + str(stk), end="")
         print()
     # 最後まで探索してstackがからの時
-    if isOK:
+    if isOK and len(stk) == 0:
         print("OK")
     else:
         print("error")
