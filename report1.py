@@ -1,12 +1,14 @@
 # 1.brackets_dictで括弧の対応付け
 # 2.stackがなくなりOK判定が出た後に括弧の追加が来た時の対応
-# 3.
+# dataは以下の3つを使用する
 data1 = "( ( ( x ) ) )( ()"
-data2 = "2[3 5(7{11}13)17]19"
-data3 = "{ {x(y)((z) x) {x} {y} }"
-
+# data2 = "2[3 5(7{11}13)17]19"
+# data3 = "{ {x(y)((z) x) {x} {y} }"
 left = ["(", "[", "{"]
 right = [")", "]", "}"]
+
+def main(data):
+    brackets_judge(data)
 
 def brackets_judge(str1):
     # 判定する括弧
@@ -42,7 +44,6 @@ def brackets_judge(str1):
     else:
         print("error")
 
-
 def brackets_dict(str1):
     if str1 == left[0]:
         return right[0]
@@ -51,5 +52,5 @@ def brackets_dict(str1):
     elif str1 == left[2]:
         return right[2]
 
-brackets_judge(data1)
-
+if __name__ == '__main__':
+    main(data1)
