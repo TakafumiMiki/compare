@@ -1,3 +1,4 @@
+import sys
 # 1.brackets_dictで括弧の対応付け
 # 2.stackがなくなりOK判定が出た後に括弧の追加が来た時の対応
 # dataは以下の3つを使用する
@@ -53,4 +54,9 @@ def brackets_dict(str1):
         return right[2]
 
 if __name__ == '__main__':
-    main(data1)
+    # コマンドラインでデータの入力を行った場合
+    if len(sys.argv) == 2:
+        main(sys.argv[1])
+    # コマンドラインで指定しなかった場合
+    else:
+        main(data1)    
