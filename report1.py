@@ -22,7 +22,7 @@ def brackets_judge(str1):
         print(str(i + 1) + ": " + inputstr, end = "\t")
         # (か[か{ならpush
         if inputstr in left:
-            print("push" + "\t" + str(stk) , end = "")
+            print("push" + "\t" + str(" ".join(stk)) , end = "")
             stk.append(inputstr)
 
         elif inputstr in right:
@@ -37,7 +37,7 @@ def brackets_judge(str1):
                     isOK = True
         # 括弧以外の文字の時
         else:
-            print("pass" + "\t" + str(stk), end="")
+            print("pass" + "\t" + str(" ".join(stk)), end="")
         print()
     # 最後まで探索してstackがからの時
     if isOK and len(stk) == 0:
