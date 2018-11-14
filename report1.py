@@ -1,6 +1,4 @@
 import sys
-# 1.brackets_dictで括弧の対応付け
-# 2.stackがなくなりOK判定が出た後に括弧の追加が来た時の対応
 # dataは以下の3つを使用する
 # data1 = "( ( ( x ) ) )( ()"
 data1 = "0[2 4(6{8}16)32]64"
@@ -46,12 +44,9 @@ def brackets_judge(str1):
         print("error")
 
 def brackets_dict(str1):
-    if str1 == left[0]:
-        return right[0]
-    elif str1 == left[1]:
-        return right[1]
-    elif str1 == left[2]:
-        return right[2]
+    for i in range(len(left)):
+        if str1 == left[i]:
+            return right[i]
 
 if __name__ == '__main__':
     # コマンドラインでデータの入力を行った場合
