@@ -30,4 +30,3 @@ def main(st):
         print('%5d %5d %5d %-10s %-20s'%(li, co, le, ty, to) )
 
 if __name__=='__main__': main(st)
-
